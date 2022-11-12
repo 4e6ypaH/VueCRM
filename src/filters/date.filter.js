@@ -1,5 +1,4 @@
 export default function dateFilter(value, format= 'date') {
-    // console.log(value);
     const options = {}
 
     if (format.includes('date')) {
@@ -15,5 +14,4 @@ export default function dateFilter(value, format= 'date') {
     }
 
     return new Intl.DateTimeFormat('ru-RU', options).format(new Date(value));
-    // return value;
 }
