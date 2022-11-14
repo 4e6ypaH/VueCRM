@@ -95,7 +95,7 @@ export default {
   }),
   validations: {
     email: { email, required },
-    password: { required, minLength: minLength(6) },
+    password: { required, minLength: minLength(7) },
     name: { required },
     isAgree: { checked: (v) => v },
   },

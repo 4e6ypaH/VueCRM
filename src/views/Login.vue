@@ -3,20 +3,20 @@
     <div class="card-content">
       <span class="card-title">Домашняя бухгалтерия</span>
       <div class="input-field">
-        <input 
+        <input
           id="email"
           type="text"
           v-model.trim="email"
           :class="{invalid: ($v.email.$dirty && !$v.email.required) || ($v.email.dirty && !$v.email.email)}"
         >
         <label for="email">Email</label>
-        <small 
+        <small
           class="helper-text invalid"
           v-if="$v.email.$dirty && !$v.email.required"
         >
           Поле Email не должно быть пустым
         </small>
-        <small 
+        <small
           class="helper-text invalid"
           v-if="$v.email.$dirty && !$v.email.email"
         >
@@ -31,7 +31,7 @@
           :class="{invalid: ($v.password.$dirty && !$v.password.required) || ($v.password.dirty && !$v.password.minLength)}"
         >
         <label for="password">Пароль</label>
-        <small 
+        <small
           class="helper-text invalid"
           v-if="$v.password.$dirty && !$v.password.required"
         >
@@ -76,7 +76,7 @@ export default {
     password: {required, minLength: minLength(7)} 
   },
   mounted() {
-    if (messages[this.$route.query.message] )
+    if (messages[this.$route.query.message])
     this.$message(messages[this.$route.query.message])
   },
   methods: {
